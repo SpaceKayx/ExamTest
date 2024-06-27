@@ -1,0 +1,61 @@
+.slogan > button
+{
+    position: absolute;
+    top: -20px;
+    right: 0px;
+    opacity: 0;
+    transition: .2s ease-in-out;
+}
+.slogan:hover button
+{
+    opacity: 1;
+}
+/* .slogan > div:before
+{
+    content: attr(data-description);
+    display: block;
+    position: absolute;
+    background: linear-gradient(to bottom, #295efb, #b3bfe3 );
+    right: 0px;
+    top: -22px;
+    border-radius: 5px;
+}
+.slogan > div:before , .slogan > div:after
+{
+    transition: .2s ease-in-out;
+    opacity: 0;
+}
+.slogan > div:hover:before
+{
+    opacity: 1;
+} */
+
+/* .update_main
+{
+    position: absolute;
+    right: 0px;
+    top: -26px;
+    height: 50px;
+    background-color: #c4c4c7;
+    border: 1px solid black;
+    content: attr(data-description);
+}
+.update_main::after
+{
+    top: -100px !important;
+}
+.update_main::after, .update_main::before
+{
+    transition: .2s ease-in-out;
+    opacity: 0;
+}
+.update_main:hover
+{
+    opacity: 1;
+    top: -26px;
+}
+.update_main:hover::after
+{
+    opacity: 0;
+    top: -50px;
+} */

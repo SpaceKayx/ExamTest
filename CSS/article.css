@@ -1,0 +1,15 @@
+
+.main
+{
+    min-height: 400px;
+}
+.main > article > div > p
+{
+    font-size: 25px;
+    font-weight: bold;
+}
+article > div
+{
+    width: 100%;
+    height: 100%;
+}

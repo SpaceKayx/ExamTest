@@ -1,0 +1,33 @@
+header
+{
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    background-image: url("../image/img_Header.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+/* .title_Header
+{
+    position: absolute;
+    float: left;
+    bottom: 0px;
+}
+.title_Header > h3
+{
+    letter-spacing: 0.5px;
+    font-size: 35px;
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-variant: small-caps;
+    padding-bottom: 5px;
+    padding-left: 20px;
+}
+.title_Header > h5
+{
+    letter-spacing: 0.5px;
+    font-size: 25px;
+    margin-top: 20px;
+    font-variant: small-caps;
+    padding-left: 20px;
+} */

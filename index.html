@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+    <link rel="stylesheet" href="CSS/article.css">
+    <link rel="stylesheet" href="CSS/aside.css">
+    <link rel="stylesheet" href="CSS/admin.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Thi Trắc Nghiệm Trực Tuyến</title>
+    <style>
+        
+    </style>
+</head>
+
+<body ng-controller="indexController" data-bs-theme="{{themes.theme}}" style="transition: 1s linear !important;">
+    
+    <section class="container-fluid p-0 bg-transparent">
+        <label class="changeTheme d-flex" for="toggle" >
+            <input type="checkbox" id="toggle" class="opacity-0 " ng-click="changeThemes()" >
+            <div class="animationChange"></div>
+        </label>
+        <nav class="navbar navbar-expand-lg navbar-light backgr m-0 sticky-top">
+            <div class="container p-0">
+                <a class="navbar-brand text-white" ng-href="{{isAdmin ? '#!main_admin': '#!/'}}">Trang chủ</a>
+                <button class="navbar-toggler d-lg-none backgr" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse row" id="collapsibleNavId">
+                    <ul class="navbar-nav m-0 p-0 col-sm-12 col-md-6 col-lg-7">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" href="#" aria-current="page">Giới thiệu
+                                <span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#lienHe">Liên hệ</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="">Thể lệ</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" id="navbarDropdownBlog" href="#"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Tài liệu</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                <li><a class="dropdown-item" href="">Toán</a></li>
+                                <li><a class="dropdown-item" href="">Lý</a></li>
+                                <li><a class="dropdown-item" href="">Hóa Học</a></li>
+                                <li><a class="dropdown-item border-bottom" href="">Sinh Học</a></li>
+                                <li><a class="dropdown-item" href="">Lịch Sử</a></li>
+                                <li><a class="dropdown-item" href="">Địa Lý</a></li>
+                                <li><a class="dropdown-item border-bottom" href="">GDCD</a></li>
+                                <li><a class="dropdown-item" href="">Tiếng Anh</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" id="navbarDropdownBlog" href="#"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">Cuộc thi</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                <li><a class="dropdown-item" href="">Toán</a></li>
+                                <li><a class="dropdown-item" href="">Lý</a></li>
+                                <li><a class="dropdown-item" href="">Hóa Học</a></li>
+                                <li><a class="dropdown-item border-bottom" href="">Sinh Học</a></li>
+                                <li><a class="dropdown-item" href="">Lịch Sử</a></li>
+                                <li><a class="dropdown-item" href="">Địa Lý</a></li>
+                                <li><a class="dropdown-item border-bottom" href="">GDCD</a></li>
+                                <li><a class="dropdown-item" href="">Tiếng Anh</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#!admin" ng-show="isAdmin">Quản
+                                lý</a></li>
+                    </ul>
+                    <form class="d-flex m-0 pe-4 col-sm-12 col-md-6 col-lg-5">
+                        <input class="form-control me-sm-2" type="text" ng-model="search" placeholder="Tìm kiếm"/>
+                        <a ng-hide="hideLogin" href="#!SignUp" class="btn btn-outline-primary bg-gradient ms-2 text-white p-0"
+                            style="width: 140px; height: 40px; line-height: 40px;" type="submit">
+                            Đăng Ký
+                        </a>
+                        <button ng-hide="hideLogin" type="button" class="btn btn-outline-primary bg-gradient ms-2 text-white p-0"
+                            style="width: 145px; height: 40px;" data-bs-toggle="modal" data-bs-target="#dangNhap">
+                            Đăng Nhập
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <header class="d-flex justify-content-center align-items-center m-0">
+            <div class="text-center">
+                <h1 class="border-bottom p-5">Chào mừng bạn đến với trung tâm thi thử trực tuyến</h1>
+                <h5 class="p-2">Đừng xấu hổ khi không biết, chỉ xấu hổ khi không học</h5>
+                <button type="button" class="btn btn-primary">Xem thêm</button>
+
+            </div>
+        </header>
+        <div ng-view></div>
+        <footer class="row">
+            <div class="card card-footer text-center">
+                Online Testing &copy; Trang Web Thi Trắc Nghiệm Uy Tín Số 1 Việt Nôm
+            </div>
+
+        </footer>
+        <div class="modal fade" id="dangNhap" tabindex="-1" aria-labelledby="dangNhap" aria-hidden="true"
+            ng-show="!hideLogin">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Đăng nhập</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form ng-submit="submitLogin()">
+                            <div class="form-floating mb-3">
+                                <input type="text" name="" ng-model="txtLogin" class="form-control"
+                                    placeholder="Tên đăng nhập" aria-describedby="helpId" />
+                                <label for="" class="form-label">Tên đăng nhập</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" name="" ng-model="pwLogin" class="form-control" placeholder=""
+                                    aria-describedby="helpId" />
+                                <label for="" class="form-label">Mật khẩu</label>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+                                <button type="submit" class="btn btn-primary backgr">Đăng Nhập</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+<script>
+    var logInModal = new bootstrap.Modal(document.getElementById('dangNhap'))
+    var app = angular.module("myApp", ["ngRoute"]);
+    // app.module
+    app.config(function ($routeProvider) {
+        $routeProvider
+            .when("/", {
+                templateUrl: "main.html",
+                controller: "mainController"
+            })
+            .when("/List_Match", {
+                templateUrl: "List_Match.html",
+                controller: "list_Match_Controller"
+            })
+            .when("/QuestionMatch", {
+                templateUrl: "QuestionMatch.html",
+                controller: "QuestionMatch_Controller"
+            })
+            .when("/main_admin", {
+                templateUrl: "main_admin.html",
+                controller: "mainAdmin"
+            })
+            .when("/admin", {
+                templateUrl: "admin.html",
+                controller: "admin_Controller"
+            })
+            .when("/SignUp", {
+                templateUrl: "SignUp.html",
+                // controller: "mainController"
+            })
+    });
+
+    app.controller("indexController", function ($scope, $http, $location, $rootScope) {
+        $rootScope.isAdmin = false
+        $rootScope.hideLogin = false
+        
+        $scope.submitLogin = function () {
+            $scope.account.forEach(element => {
+                if ($scope.txtLogin == element.username && $scope.pwLogin == element.password) {
+                    $rootScope.isAdmin = true
+                    alert("Đăng nhập thành công")
+                    logInModal.hide()
+                    $location.path('/main_admin')
+                    $scope.hideLogin = true
+                }
+            });
+
+        }
+        $scope.loadData = function () {
+            $http.get("http://localhost:3000/account")
+            // $http.get("https://yum-food-ea247-default-rtdb.asia-southeast1.firebasedatabase.app/")
+                .then(res => {
+                    $scope.account = res.data
+                    console.log(res.data);
+                })
+        }
+        $scope.loadData()
+
+        $scope.themes = {
+            "theme": "light"
+        };
+
+        $scope.changeThemes = function () {
+            if ($scope.themes.theme === "light") {
+                $scope.themes.theme = "dark";
+            } else {
+                $scope.themes.theme = "light";
+            }
+        };
+        // $rootScope.checkExcersice = () =>
+        // {
+        //     $rootScope.check = true
+        // }
+    })
+</script>
+<script src="js/main.js"></script>
+<script src="js/List_Match.js"></script>
+<script src="js/QuestionMatch.js"></script>
+<script src="js/mainAdmin.js"></script>
+<script src="js/admin.js"></script>

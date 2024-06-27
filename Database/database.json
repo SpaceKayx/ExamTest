@@ -1,0 +1,386 @@
+{
+  "java4_demo": [
+    {
+      "userName": "e",
+      "passWord": "e",
+      "gender": "Nam",
+      "married": "Đã có gia đình",
+      "country": "Vietnamese",
+      "note": "e",
+      "id": 1
+    },
+    {
+      "userName": "s",
+      "passWord": "s",
+      "gender": "Nam",
+      "married": "Đã có gia đình",
+      "country": "America",
+      "note": "s",
+      "id": 2
+    },
+    {
+      "userName": "cc",
+      "passWord": "cc",
+      "gender": "Nam",
+      "married": "Đã có gia đình",
+      "country": "America",
+      "note": "cc",
+      "id": 3
+    },
+    {
+      "userName": "a",
+      "passWord": "a",
+      "gender": "Nam",
+      "married": "Đã có gia đình",
+      "country": "America",
+      "note": "a",
+      "id": 4
+    },
+    {
+      "userName": "b",
+      "passWord": "b",
+      "gender": "Nam",
+      "married": "Chưa có gia đình",
+      "country": "Vietnamese",
+      "note": "b",
+      "id": 5
+    },
+    {
+      "userName": "b",
+      "passWord": "b",
+      "gender": "Nam",
+      "married": "Chưa có gia đình",
+      "country": "Vietnamese",
+      "note": "b",
+      "id": 6
+    },
+    {
+      "userName": "f",
+      "passWord": "f",
+      "gender": "Nữ",
+      "married": "Chưa có gia đình",
+      "country": "Vietnamese",
+      "note": "f",
+      "id": 7
+    },
+    {
+      "userName": "f",
+      "passWord": "f",
+      "gender": "Nam",
+      "married": "Chưa có gia đình",
+      "country": "Vietnamese",
+      "note": "f",
+      "id": 8
+    }
+  ],
+  "baoVe": [
+    {
+      "id": 1,
+      "img": "kaisa-ti-ni.png",
+      "name": " Kaisa All Start 1",
+      "oldPrice": 6300,
+      "newPrice": 5300,
+      "trangThaiKhac": "",
+      "trangThai": "New",
+      "sale": "8%"
+    },
+    {
+      "id": 2,
+      "img": "kaisa-ti-ni.png",
+      "name": " Kaisa All Start 2",
+      "oldPrice": 6300,
+      "newPrice": 5300,
+      "trangThaiKhac": "Hot",
+      "trangThai": "",
+      "sale": "8%"
+    },
+    {
+      "id": 3,
+      "img": "kaisa-ti-ni.png",
+      "name": " Kaisa All Start 3",
+      "oldPrice": 6300,
+      "newPrice": 5300,
+      "trangThaiKhac": "",
+      "trangThai": "Mới"
+    },
+    {
+      "id": 4,
+      "img": "kaisa-ti-ni.png",
+      "name": " Kaisa All Start 4",
+      "oldPrice": 6300,
+      "newPrice": 5300,
+      "trangThaiKhac": "",
+      "trangThai": "50%",
+      "sale": "8%"
+    },
+    {
+      "id": 5,
+      "img": "kaisa-ti-ni.png",
+      "name": " Kaisa All Start 5",
+      "oldPrice": 6300,
+      "newPrice": 5300,
+      "trangThaiKhac": "",
+      "trangThai": "50%",
+      "sale": "8%"
+    },
+    {
+      "id": 6,
+      "img": "kaisa-ti-ni.png",
+      "name": " Kaisa All Start 6",
+      "oldPrice": 6300,
+      "newPrice": 5300,
+      "trangThaiKhac": "",
+      "trangThai": "50%",
+      "sale": "8%"
+    },
+    {
+      "id": 7,
+      "img": "kaisa-ti-ni.png",
+      "name": " Kaisa All Start 7",
+      "oldPrice": 6300,
+      "newPrice": 5300,
+      "trangThaiKhac": "",
+      "trangThai": "50%",
+      "sale": "8%"
+    },
+    {
+      "id": 8,
+      "img": "kaisa-ti-ni.png",
+      "name": " Kaisa All Start 8",
+      "oldPrice": 6300,
+      "newPrice": 5300,
+      "trangThaiKhac": "",
+      "trangThai": "50%",
+      "sale": "8%"
+    }
+  ],
+  "Account": [
+    {
+      "id": 1,
+      "username": "ps001",
+      "fullName": "Nguyễn Mẩn Đạt",
+      "password": "1234",
+      "birthDay": "08-03-2004",
+      "address": "979 Quang Trung",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "ps002",
+      "fullName": "Đạt đẹp trai",
+      "password": "1234",
+      "birthDay": "08-03-2004",
+      "address": "979 Quang Trung",
+      "role": "member"
+    }
+  ],
+  "Slogan": [
+    {
+      "caption": "Tôi đã thi trượt một số môn, nhưng bạn tôi thì đã qua tất cả. Bây giờ anh ta là một kỹ sư trong Microsoft còn tôi là chủ sở hữu của Microsoft",
+      "id": 1
+    }
+  ],
+  "List_In_Main": [
+    {
+      "img": "match.jpg",
+      "name": "Online Testing Match",
+      "smallName": "Bài tập Toán Nâng cao - Luyện thi Toán",
+      "auth": "Nguyễn Mẩn Đạt",
+      "time": "15-01-2024 22:22"
+    },
+    {
+      "img": "english.jpg",
+      "name": "Online Testing English",
+      "smallName": "Bài tập Tiếng Anh Nâng cao - Luyện thi Tiếng Anh",
+      "auth": "Nguyễn Mẩn Đạt",
+      "time": "15-01-2024 22:23"
+    },
+    {
+      "img": "physics.jpg",
+      "name": "Online Testing Physics",
+      "smallName": "Bài tập Vật Lý Nâng cao - Luyện thi Vật Lý",
+      "auth": "Nguyễn Mẩn Đạt",
+      "time": "15-01-2024 22:24"
+    },
+    {
+      "img": "chemistry.jpg",
+      "name": "Online Testing Chemistry",
+      "smallName": "Bài tập Hóa học Nâng cao - Luyện thi Hóa học",
+      "auth": "Nguyễn Mẩn Đạt",
+      "time": "15-01-2024 22:25"
+    }
+  ],
+  "List_In_ListMatch": [
+    {
+      "id": 1,
+      "img": "match.jpg",
+      "view": 150.904,
+      "exam": 80.304,
+      "name": "Đề thi thử trung học phổ thông quốc gia lớp 12 môn Toán năm 2023 lần 1",
+      "questions": 15,
+      "minutes": 20
+    },
+    {
+      "id": 2,
+      "img": "match0.jpg",
+      "view": 150.904,
+      "exam": 80.304,
+      "name": "Đề thi thử trung học phổ thông quốc gia lớp 12 môn Toán năm 2023 lần 2",
+      "questions": 50,
+      "minutes": 90
+    },
+    {
+      "id": 3,
+      "img": "match1.jpg",
+      "view": 150.904,
+      "exam": 80.304,
+      "name": "Đề thi thử trung học phổ thông quốc gia lớp 12 môn Toán năm 2023 lần 3",
+      "questions": 50,
+      "minutes": 90
+    },
+    {
+      "id": 4,
+      "img": "match2.jpg",
+      "view": 150.904,
+      "exam": 80.304,
+      "name": "Đề thi thử trung học phổ thông quốc gia lớp 12 môn Toán năm 2023 lần 4",
+      "questions": 50,
+      "minutes": 90
+    },
+    {
+      "id": 5,
+      "img": "match3.jpg",
+      "view": 150.904,
+      "exam": 80.304,
+      "name": "Đề thi thử trung học phổ thông quốc gia lớp 12 môn Toán năm 2023 lần 5",
+      "questions": 50,
+      "minutes": 90
+    },
+    {
+      "id": 6,
+      "img": "match4.jpg",
+      "view": 150.904,
+      "exam": 80.304,
+      "name": "Đề thi thử trung học phổ thông quốc gia lớp 12 môn Toán năm 2023 lần 6",
+      "questions": 50,
+      "minutes": 90
+    }
+  ],
+  "Question_Match": [
+    {
+      "id": 1,
+      "question": "Tính đạo hàm của hàm số y = 3x² - 4x + 2",
+      "answerId": 1,
+      "answers": [
+        {
+          "id": 1,
+          "text": "y' = 6x - 4"
+        },
+        {
+          "id": 2,
+          "text": "y' = 3x - 4"
+        },
+        {
+          "id": 3,
+          "text": "y' = 6x + 4"
+        },
+        {
+          "id": 4,
+          "text": "y' = 3x + 4"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Giải phương trình log₃(x + 2) + log₃(x - 1) = 2",
+      "answerId": 3,
+      "answers": [
+        {
+          "id": 1,
+          "text": "x = 1"
+        },
+        {
+          "id": 2,
+          "text": "x = 2"
+        },
+        {
+          "id": 3,
+          "text": "x = 3"
+        },
+        {
+          "id": 4,
+          "text": "x = 4"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Tính chu vi của tam giác ABC có độ dài các cạnh lần lượt là AB = 5 cm, BC = 7 cm, AC = 8 cm",
+      "answerId": 2,
+      "answers": [
+        {
+          "id": 1,
+          "text": "17 cm"
+        },
+        {
+          "id": 2,
+          "text": "20 cm"
+        },
+        {
+          "id": 3,
+          "text": "22 cm"
+        },
+        {
+          "id": 4,
+          "text": "24 cm"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Tính giá trị của biểu thức: log₁₀(100) + log₂(8) - log₃(9)",
+      "answerId": 1,
+      "answers": [
+        {
+          "id": 1,
+          "text": "3"
+        },
+        {
+          "id": 2,
+          "text": "2"
+        },
+        {
+          "id": 3,
+          "text": "1"
+        },
+        {
+          "id": 4,
+          "text": "0"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "as",
+      "answerId": 1,
+      "answers": [
+        {
+          "id": 1,
+          "text": "dasda"
+        },
+        {
+          "id": 2,
+          "text": "sdasd"
+        },
+        {
+          "id": 3,
+          "text": "asd"
+        },
+        {
+          "id": 4,
+          "text": "asdad"
+        }
+      ]
+    }
+  ]
+}

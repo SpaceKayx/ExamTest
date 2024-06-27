@@ -1,0 +1,45 @@
+nav
+{
+    z-index: 100;
+    /* position: fixed !important; */
+    width: 100% !important;
+}
+@media screen and (width < 1030px) {
+    .show > ul
+    {
+        margin: 0px;
+    }
+    .show > form > button 
+    {
+        width: 160px !important;
+    }
+    #dangKy
+    {
+        background: url(../image/picture_dangKy1400.jpg);
+    }
+}
+@media screen and (width < 1400px) {
+    #dangKy
+    {
+        background: url(../image/picture_dangKy1400.jpg);
+    }
+}
+@media screen and (width < 1200px) {
+    #dangKy
+    {
+        background: linear-gradient(to bottom, #f479e6,#a2b7f6) !important;
+    }
+    .backgr {
+        background: linear-gradient(to bottom, #295efb, #a2b7f6 ) !important;
+    }
+    .show {
+        background: linear-gradient(to bottom, #295efb, #a2b7f6 ) !important;
+    }
+}
+/* .show {
+    background: transparent !important;
+} */
+.show > ul
+{
+    margin-left: 20px !important;
+}

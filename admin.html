@@ -1,0 +1,244 @@
+<section class="container">
+    <div class="row mt-3">
+        <div class="col-lg-2">
+            <div class="">Quản lý</div>
+            <nav class="nav nav-tabs nav-stacked">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#Analyst">Hoạt động</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">Tài liệu</a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                            <li><a class="dropdown-item" data-bs-toggle="tab" href="#Match">Toán</a></li>
+                            <li><a class="dropdown-item" href="">Lý</a></li>
+                            <li><a class="dropdown-item" href="">Hóa Học</a></li>
+                            <li><a class="dropdown-item border-bottom" href="">Sinh Học</a></li>
+                            <li><a class="dropdown-item" href="">Lịch Sử</a></li>
+                            <li><a class="dropdown-item" href="">Địa Lý</a></li>
+                            <li><a class="dropdown-item border-bottom" href="">GDCD</a></li>
+                            <li><a class="dropdown-item" href="">Tiếng Anh</a></li>
+                        </ul>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link" data-bs-toggle="tab" data-bs-toggle="modal" href="#HopThoai">Hộp thoại</a>
+                    </li> -->
+                </ul>
+            </nav>
+        </div>
+        <div class="col-lg-10">
+            <section class="tab-content">
+                <!-- <section class="tab-pane container fade" id="HopThoai">
+                    
+                </section> -->
+                <section class="tab-pane container active mb-5" id="Analyst">
+                    <div class="backgr position-relative rounded-3" style="height: 12rem !important; ">
+                        <p class="ms-2 text-light fw-bold" style="font-size: 25px;">Thống kê</p>
+                        <div class="d-flex justify-content-between align-items-center gap-2 position-sticky">
+                            <div class="bg-light  border-1 rounded-2 w-25 ms-2" style="height: 120px !important;">
+                                <div class="d-flex justify-content-between align-items-center ">
+                                    <h6 class="ms-2 fw-bold">Lượt truy cập ngày </h6>
+                                    <i class="fa fa-users border text-primary my-3 me-3 p-2 rounded-2"
+                                        style="font-size: 25px;" aria-hidden="true"></i>
+                                </div>
+
+                                <h5 class="text-center text-danger">1080 người dùng</h5>
+                            </div>
+                            <div class="bg-light  border-1 rounded-2 w-25 ms-2" style="height: 120px !important;">
+                                <div class="bg-light  border-1 rounded-2 ms-2">
+                                    <div class="d-flex justify-content-between align-items-center ">
+                                        <h6 class="fw-bold">Thành viên hoạt động</h6>
+                                        <i class="fa fa-users border text-primary my-3 me-3 p-2 rounded-2"
+                                            style="font-size: 25px;" aria-hidden="true"></i>
+                                    </div>
+                                    <h5 class="text-center text-danger">502 người dùng</h5>
+                                </div>
+                            </div>
+                            <div class="bg-light  border-1 rounded-2 w-25 ms-2 me-2" style="height: 120px !important;">
+                                <div class="bg-light  border-1 rounded-2 ms-2">
+                                    <div class="d-flex justify-content-between align-items-center ">
+                                        <h6 class="fw-bold">Quản trị viên</h6>
+                                        <i class="fa fa-users border text-primary my-3 me-3 p-2 rounded-2"
+                                            style="font-size: 25px;" aria-hidden="true"></i>
+                                    </div>
+                                    <h5 class="text-center text-danger">12 người dùng</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table-responsive mt-5">
+                        <table class="table table-primary">
+                            <thead>
+                                <tr>
+                                    <th scope="col">STT</th>
+                                    <th scope="col">Họ và tên</th>
+                                    <th scope="col">Ngày sinh</th>
+                                    <th scope="col">Địa chỉ</th>
+                                    <th scope="col">Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="" ng-repeat="user in users">
+                                    <td scope="row">{{user.id}}</td>
+                                    <td scope="row">{{user.fullName}}</td>
+                                    <td scope="row">{{user.birthDay}}</td>
+                                    <td scope="row">{{user.address}}</td>
+                                    <td scope="row">{{user.role}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+                <section class="tab-pane container fade" id="Match">
+                    <h4 class="card-title pt-3 mb-4 border-bottom border-2">
+                        Danh sách các môn Toán
+                    </h4>
+                    <div class="table-responsive" ng-show="checkDetail">
+                        <table border="1" class="table table-primary bg-gradient table-bordered backgr">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Tên môn</th>
+                                    <th scope="col">Số câu</th>
+                                    <th scope="col">Thời gian (phút)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="table table-primary">
+                                    <td scope="row">{{ID}}</td>
+                                    <td>{{List_In_ListMatch[ID-1].name}}</td>
+                                    <td>{{List_In_ListMatch[ID-1].questions}}</td>
+                                    <td>{{List_In_ListMatch[ID-1].minutes}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="d-flex flex-wrap mb-2" ng-show="checkDetail">
+                        <button class="me-3" ng-repeat="list in list_Question" ng-click="checkSentence(list.id)">Câu
+                            {{list.id}}</button>
+                    </div>
+                    <div class="mt-3 mb-3" ng-show="checkDetail">
+                        <button class="me-3 backgr" ng-click="viewAll()" ng-show="checkQuestion">View All</button>
+                        <button class="me-3 backgr" ng-click="New()">New</button>
+                        <button class="me-3 backgr" ng-click="Update(sentence_ID)"
+                            ng-show="checkQuestion">Update</button>
+                        <button class="me-3 backgr" ng-click="Delete(sentence_ID)"
+                            ng-show="checkQuestion">Delete</button>
+                    </div>
+                    <div class="card mb-5" ng-show="checkQuestion">
+                        <div class="card-header">
+                            Câu {{list_Question[sentence_ID-1].id}}
+                        </div>
+                        <div class="card-body">
+                            <div class="caption mb-2">
+                                {{list_Question[sentence_ID-1].question}}
+                            </div>
+                            <div class="form-check">
+                                <!-- ng-repeat="a in list_Question[sentence_ID-1].answers" -->
+                                <!-- <input class="form-control mb-2" type="text" ng-model="$index"
+                                    value="{{a.text}}"></input> -->
+                                <input class="form-control mb-2"  type="text" value="{{list_Question[sentence_ID-1].answers[0].text}}"></input>
+                                <input class="form-control mb-2 " type="text" value="{{list_Question[sentence_ID-1].answers[1].text}}"></input>
+                                <input class="form-control mb-2 " type="text" value="{{list_Question[sentence_ID-1].answers[2].text}}"></input>
+                                <input class="form-control mb-2 " type="text" value="{{list_Question[sentence_ID-1].answers[3].text}}"></input>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-5" ng-show="checkNew">
+                        <div class="card-header" ng-model="newID">
+                            Câu {{list_Question.length+1}}
+                        </div>
+                        <div class="card-body">
+                            <div class="caption mb-3 form-floating">
+                                <input type="text" class="form-control" ng-model="newQuestion"
+                                    aria-describedby="helpId" />
+                                <label for="" class="form-label">Câu hỏi</label>
+                            </div>
+                            <div class="form-control">
+                                <h5>Đáp án</h5>
+                                <input type="text" class="form-control mb-2" ng-model="QuestionA"
+                                    placeholder="Đáp án đúng" />
+                                <input type="text" class="form-control mb-2" ng-model="QuestionB" />
+                                <input type="text" class="form-control mb-2" ng-model="QuestionC" />
+                                <input type="text" class="form-control mb-2" ng-model="QuestionD" />
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="card mb-5" ng-show="checkNew">
+                        <div class="card-header" ng-model="newID">
+                            Câu {{list_Question.length+1}}
+                        </div>
+                        <div class="card-body">
+                            <div class="caption mb-3 form-floating">
+                                <input type="text" class="form-control" ng-model="newQuestion" aria-describedby="helpId"/>
+                                <label for="" class="form-label">Câu hỏi</label>
+                            </div>
+                            <div class="form-control">
+                                <h5>Đáp án</h5>
+                                <input type="text" class="form-control mb-2" ng-model="QuestionA" placeholder="Đáp án đúng"/>
+                                <input type="text" class="form-control mb-2" ng-model="QuestionB"/>
+                                <input type="text" class="form-control mb-2" ng-model="QuestionC"/>
+                                <input type="text" class="form-control mb-2" ng-model="QuestionD"/>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="table-responsive" ng-hide="checkQuestion">
+                        <table class="table table-light">
+                            <tbody>
+                                <tr class="" ng-repeat="list in list_Question" ng-model="lIndex"
+                                    ng-init="lIndex = $index">
+                                    <td scope="row">
+                                        <p>
+                                            <strong style="font-size:15px">Câu {{$index+1}}</strong>
+                                        </p>
+                                        <p>{{list.question}}</p>
+                                        <div class="table-responsive">
+                                            <table>
+                                                <tbody>
+                                                    <tr class="">
+                                                        <div class="form-check" ng-repeat="a in list.answers">
+                                                            <input class="form-check-input" type="radio"
+                                                                name="quizz_{{lIndex}}">
+                                                            <label>{{a.text}}</label>
+                                                        </div>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <table class="table table-striped table-hover table-borderless table-primary align-middle"
+                        ng-hide="checkDetail">
+                        <thead class="table-light">
+                            <tr>
+                                <th>STT</th>
+                                <th>Hình ảnh</th>
+                                <th>Tên để bài</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-group-divider" ng-repeat="list in List_In_ListMatch">
+                            <tr class="tableIn table-primary">
+                                <td scope="row" ng-model="checkID">{{list.id}}</td>
+                                <td><img src="./image/{{list.img}}" alt="" style="width: 50px;"></td>
+                                <td>{{list.name}}</td>
+                                <td><button class="nav-link" href="" ng-click="viewDetail(list.id)">Chi tiết</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </section>
+
+            </section>
+        </div>
+    </div>
+</section>

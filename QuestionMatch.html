@@ -1,0 +1,178 @@
+<section class="container-fluid">
+    <div class="row container-fluid p-0">
+        <section class="col-9">
+            <h4 class="card-title pt-3 mb-4 border-bottom border-2">
+                Đề thi thử trung học phổ thông quốc gia lớp 12 môn Toán năm 2023
+            </h4>
+            <div class="table-responsive">
+                <div class="table-responsive container">
+                    <table border="1" class="table table-primary bg-gradient table-bordered backgr">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">Tên môn</th>
+                                <th scope="col">Số câu</th>
+                                <th scope="col">Thời gian (phút)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="">
+                                <td>{{list_Match[ID-1].id}}</td>
+                                <td scope="row">{{list_Match[ID-1].name}}</td>
+                                <td>{{list_Match[ID-1].questions}}</td>
+                                <td id="countdown">{{list_Match[ID-1].minutes}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <table class="table table-light">
+                    <tbody>
+                        <tr class="" ng-repeat="list in list_Question" ng-model="lIndex" ng-init="lIndex = $index">
+                            <td scope="row">
+                                <p>
+                                    <strong style="font-size:15px">Câu {{$index+1}}</strong>
+                                </p>
+                                <p>{{list.question}}</p>
+                                <div class="table-responsive">
+                                    <table>
+                                        <tbody>
+                                            <tr class="">
+                                                <div class="form-check" ng-repeat="a in list.answers">
+                                                    <input class="form-check-input" type="radio" name="quizz_{{lIndex}}"
+                                                        ng-click="checkQuizz(a.id, list.answerId, lIndex)">
+                                                    <label
+                                                        ng-class="{'form-check-label' : true, 'text-success bold' : yourResults[lIndex].yourAnswer === list.answerId && a.id === yourResults[lIndex].yourAnswer, 'text-danger' : yourResults[lIndex].yourAnswer !== list.answerId && a.id === yourResults[lIndex].yourAnswer}">{{a.text}}</label>
+                                                </div>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button type="button" class="btn btn-primary mb-3 me-3 float-end" ng-hide="check" ng-click="checkBook()">
+                Làm bài
+            </button>
+            <button type="button" class="btn btn-primary mb-3 me-3 float-end" ng-show="check" ng-click="submitQuizz()">
+                Nộp bài
+            </button>
+
+        </section>
+        <aside class="col-3 p-0">
+            <h4 class="card-title pt-3 mb-4 border-bottom border-2">ĐIỂM CAO TRONG 7 NGÀY QUA</h4>
+            <div class="excercise">
+                <div class="select_people row border border-1 rounded-0 py-2 mb-2">
+                    <div class="select_people_img col-3">
+                        <img src="image/non-people.jpg" alt="">
+                    </div>
+                    <div class="select_people_caption col-9">
+                        <div class="row">
+                            <p class="select_people_caption_name fs-6 text-primary m-0 mb-1 col-12">
+                                Nguyễn Mẩn Đạt - Bài thi số 1
+                            </p>
+                            <small class="fs-6 col-12 mb-1">Lớp 12 - Môn Tiếng Anh</small>
+                            <div class="select_people_caption_name fs-6 text-primary mb-0 col-12">
+                                <div class="row">
+                                    <span class="badge backgr text-body col-lg-3 col-md-5 col-sm-5 col-6"
+                                        style="height: 25px;">
+                                        <section>100đ</section>
+                                    </span>
+                                    <p class="col-lg-9 col-md-9 col-sm-12 col-12">00:15 15/09/2004</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="select_people row border border-1 rounded-0 py-2 mb-2">
+                    <div class="select_people_img col-3">
+                        <img src="image/non-people.jpg" alt="">
+                    </div>
+                    <div class="select_people_caption col-9">
+                        <div class="row">
+                            <p class="select_people_caption_name fs-6 text-primary m-0 col-12">
+                                Nguyễn Mẩn Đạt - Bài thi số 2
+                            </p>
+                            <small class="fs-6 col-12">Lớp 12 - Môn Tiếng Anh</small>
+                            <div class="select_people_caption_name fs-6 text-primary mb-0 col-12">
+                                <div class="row">
+                                    <span class="badge backgr text-body col-lg-3 col-md-5 col-sm-5 col-6"
+                                        style="height: 25px;">
+                                        <section>100đ</section>
+                                    </span>
+                                    <p class="col-lg-9 col-md-9 col-sm-12 col-12">00:15 15/09/2004</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="select_people row border border-1 rounded-0 py-2 mb-2">
+                    <div class="select_people_img col-3">
+                        <img src="image/non-people.jpg" alt="">
+                    </div>
+                    <div class="select_people_caption col-9">
+                        <div class="row">
+                            <p class="select_people_caption_name fs-6 text-primary m-0 col-12">
+                                Nguyễn Mẩn Đạt - Bài thi số 3
+                            </p>
+                            <small class="fs-6 col-12">Lớp 12 - Môn Tiếng Anh</small>
+                            <div class="select_people_caption_name fs-6 text-primary mb-0 col-12">
+                                <div class="row">
+                                    <span class="badge backgr text-body col-lg-3 col-md-5 col-sm-5 col-6"
+                                        style="height: 25px;">
+                                        <section>100đ</section>
+                                    </span>
+                                    <p class="col-lg-9 col-md-9 col-sm-12 col-12">00:15 15/09/2004</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="select_people row border border-1 rounded-0 py-2 mb-2">
+                    <div class="select_people_img col-3">
+                        <img src="image/non-people.jpg" alt="">
+                    </div>
+                    <div class="select_people_caption col-9">
+                        <div class="row">
+                            <p class="select_people_caption_name fs-6 text-primary m-0 col-12">
+                                Nguyễn Mẩn Đạt - Bài thi số 4
+                            </p>
+                            <small class="fs-6 col-12">Lớp 12 - Môn Tiếng Anh</small>
+                            <div class="select_people_caption_name fs-6 text-primary mb-0 col-12">
+                                <div class="row">
+                                    <span class="badge backgr text-body col-lg-3 col-md-5 col-sm-5 col-6"
+                                        style="height: 25px;">
+                                        <section>100đ</section>
+                                    </span>
+                                    <p class="col-lg-9 col-md-9 col-sm-12 col-12">00:15 15/09/2004</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="select_people row border border-1 rounded-0 py-2 mb-2">
+                    <div class="select_people_img col-3">
+                        <img src="image/non-people.jpg" alt="">
+                    </div>
+                    <div class="select_people_caption col-9">
+                        <div class="row">
+                            <p class="select_people_caption_name fs-6 text-primary m-0 col-12">
+                                Nguyễn Mẩn Đạt - Bài thi số 5
+                            </p>
+                            <small class="fs-6 col-12">Lớp 12 - Môn Tiếng Anh</small>
+                            <div class="select_people_caption_name fs-6 text-primary mb-0 col-12">
+                                <div class="row">
+                                    <span class="badge backgr text-body col-lg-3 col-md-5 col-sm-5 col-6"
+                                        style="height: 25px;">
+                                        <section>100đ</section>
+                                    </span>
+                                    <p class="col-lg-9 col-md-9 col-sm-12 col-12">00:15 15/09/2004</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>

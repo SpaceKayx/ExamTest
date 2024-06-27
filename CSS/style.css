@@ -1,0 +1,168 @@
+body[data-bs-theme='dark'] header,.card{
+    color: black !important;            
+}
+body[data-bs-theme='dark'] .changeTheme{
+    background-color: white !important;       
+}
+body[data-bs-theme='dark'] .animationChange{
+    background-color: black !important;       
+}
+body[data-bs-theme='dark'] footer > div{
+    color: white !important;       
+}
+
+.changeTheme {
+    width: 60px;
+    height: 30px;
+    background-color: black;
+    top: 100px;
+    right: 30px;
+    position: fixed;
+    border-radius: 25px;
+    z-index: 100;
+}
+
+.changeTheme > input:checked + .animationChange {
+    position: absolute;
+    animation: ani .5s linear forwards;
+}
+@keyframes ani {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(30px);
+    }
+}
+
+
+.animationChange {
+    width: 30px;
+    height: 28px;
+    left: 0;
+    top: 1px;
+    position: absolute;
+    background-color: white;
+    border-radius: 25px;
+}
+
+.slogan
+{
+    position: relative;
+    min-height: 180px;
+    background-color: #c4c4c7;
+}/* 
+.slogan > div
+{
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    margin-left: 325px;
+    margin-right: 325px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+} */
+.slogan_caption
+{
+    width: 70%;
+}
+.slogan_icon_slash
+{
+    color: blue;
+    font-size: 14px;
+}
+.excercise
+{
+    min-height: 400px;
+}
+.excercise > div:hover
+{
+    transition: 0.5s;
+    transform: scale(1.03);
+}
+.excersice_header {
+    height: 100%;
+}
+.card-img-top > img
+{
+    width: 100%;
+}
+a
+{
+    text-decoration: none;
+}
+.excersice_body
+{
+    color: black;
+    letter-spacing: 0.5px;
+}
+.excersice_footer
+{
+    color: black;
+    font-size: 15px;
+}
+.gulugulu_map
+{
+    min-height: 410px;
+    width: 100%;
+}
+.gulugulu_map_tasks 
+{
+    width: 100% !important;
+}
+.gulugulu_map_tasks > div > iframe
+{
+    width: 100%;
+    height: 100%;
+}
+@media screen and (width < 1000px) {
+    iframe
+    {
+        height: 400px !important;
+    }
+}
+.header_dangKy
+{
+    position: relative;
+}
+.title_DangKy
+{
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#dangKy
+{
+    background: url(../image/picture_dangKy.jpg);
+}
+/* #295efb */
+.backgr
+{
+    background: linear-gradient(to bottom, #295efb, #b3bfe3 )
+}
+.select_people
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.select_people_img > img
+{
+    width: 100%;
+    float: left;
+}
+.select_people_caption_name
+{
+    width: 100%;
+    float: right;
+}
+.select_people_caption_name > span
+{
+    width: 20%;
+    float: left;
+    margin-right: 10px;
+}
+.select_people_caption_name > p
+{
+    font-size: 15px;
+}
